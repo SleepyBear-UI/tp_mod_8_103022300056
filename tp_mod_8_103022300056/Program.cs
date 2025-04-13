@@ -10,11 +10,11 @@ class Program
         Console.WriteLine($"Berapa suhu badan anda saat ini? (dalam satuan {config.satuan_suhu})");
         double suhu = double.Parse(Console.ReadLine());
 
-        Console.WriteLine("Berapa jarak anda ke lokasi (perkiraan meter)?");
-        double jarak = double.Parse(Console.ReadLine());
+        Console.WriteLine("Berapa hari yang lalu anda terkena Demam?");
+        double hari = double.Parse(Console.ReadLine());
 
         bool suhuAman = suhu <= config.batas_demam;
-        bool jarakAman = jarak <= 1.5;
+        bool jarakAman = hari <= 1.5;
 
         if (suhuAman && jarakAman)
         {
