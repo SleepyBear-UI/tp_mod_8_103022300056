@@ -23,7 +23,7 @@ public class CovidConfig
             CovidConfig defaultConfig = new CovidConfig
             {
                 satuan_suhu = "celsius",
-                batas_demam = 37.5,
+                batas_demam = 14,
                 pesan_ditolak = "Anda tidak diperbolehkan masuk ke dalam gedung ini",
                 pesan_diterima = "Anda dipersilakan untuk masuk ke dalam gedung ini"
             };

@@ -13,8 +13,18 @@ class Program
         Console.WriteLine("Berapa hari yang lalu anda terkena Demam?");
         double hari = double.Parse(Console.ReadLine());
 
-        bool suhuAman = suhu <= config.batas_demam;
-        bool jarakAman = hari <= 1.5;
+        bool suhuAman = false;
+
+        if (config.satuan_suhu.ToLower() == "celcius")
+        {
+            suhuAman = suhu >= 36.5 && suhu <= 37.5;
+        }
+        else if (config.satuan_suhu.ToLower() == "fahrenheit")
+        {
+            suhuAman = suhu >= 97.7 && suhu <= 99.5;
+        }
+
+        bool jarakAman = hari <= config.batas_demam;
 
         if (suhuAman && jarakAman)
         {
