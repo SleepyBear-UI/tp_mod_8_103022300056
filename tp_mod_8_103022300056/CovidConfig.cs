@@ -41,15 +41,13 @@ public class CovidConfig
 
     public void UbahSatuan()
     {
-        if (satuan_suhu.ToLower() == "celsius")
+        if (satuan_suhu.ToLower() == "celcius")
         {
             satuan_suhu = "fahrenheit";
-            batas_demam = Math.Round((batas_demam * 9 / 5) + 32, 1);
         }
         else
         {
-            satuan_suhu = "celsius";
-            batas_demam = Math.Round((batas_demam - 32) * 5 / 9, 1);
+            satuan_suhu = "celcius";
         }
         SaveConfig();
     }
